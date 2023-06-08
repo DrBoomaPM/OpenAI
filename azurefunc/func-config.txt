@@ -1,25 +1,25 @@
   {
     "name": "GPT_ENGINE",
-    "value": "<MODEL DEPLOYMENT NAME>",
+    "value": "gpt-3.5",
     "slotSetting": false
   },
   {
     "name": "OPENAI_API_KEY",
-    "value": "<OPEN API KEY>",
+    "value": "bbb98f336c484e639c58bf1ffb7ab034",
     "slotSetting": false
   },
   {
     "name": "OPENAI_RESOURCE_ENDPOINT",
-    "value": "<END POINT NAME>",
+    "value": "https://genai-openai1122.openai.azure.com/",
     "slotSetting": false
   },
   {
     "name": "SQL_DB_NAME",
-    "value": "<DATABASE NAME>",
+    "value": "genai_db",
     "slotSetting": false
   },
   {
     "name": "SQL_SERVER_NAME",
-    "value": "<SERVERNAME>.database.windows.net",
+    "value": "genai-server.database.windows.net",
     "slotSetting": false
   }
