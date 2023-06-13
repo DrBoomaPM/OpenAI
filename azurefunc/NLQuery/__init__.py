@@ -33,7 +33,7 @@ def execute_sql_query(query):
     database=os.getenv("SQL_DB_NAME")
     
    
-    driver="{ODBC Driver 17 for SQL Server}"
+    driver="{ODBC Driver 18 for SQL Server}"
     db_token = ''
     connection_string = 'DRIVER='+driver+';SERVER='+server+';DATABASE='+database
     
