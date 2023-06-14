@@ -33,7 +33,7 @@ def execute_sql_query(query):
     database=os.getenv("SQL_DB_NAME")
     
    
-    driver="{ODBC Driver 17 for SQL Server}"
+    driver="{ODBC Driver 18 for SQL Server}"
     db_token = ''
     connection_string = 'DRIVER='+driver+';SERVER='+server+';DATABASE='+database
     
@@ -69,66 +69,12 @@ def execute_sql_query(query):
 
 def get_sales_sql_query(nlquery):
     return f"""
-Given tables [SalesLT].[SalesOrderHeader] with following columns
- [SalesOrderID]
-      ,[RevisionNumber]
-      ,[OrderDate]
-      ,[DueDate]
-      ,[ShipDate]
-      ,[Status]
-      ,[OnlineOrderFlag]
-      ,[SalesOrderNumber]
-      ,[PurchaseOrderNumber]
-      ,[AccountNumber]
-      ,[CustomerID]
-      ,[ShipToAddressID]
-      ,[BillToAddressID]
-      ,[ShipMethod]
-      ,[CreditCardApprovalCode]
-      ,[SubTotal]
-      ,[TaxAmt]
-      ,[Freight]
-      ,[TotalDue]
-      ,[Comment]
-      ,[rowguid]
-      ,[ModifiedDate]
-Table [SalesLT].[SalesOrderDetail] with following columns
-[SalesOrderID]
-      ,[SalesOrderDetailID]
-      ,[OrderQty]
-      ,[ProductID]
-      ,[UnitPrice]
-      ,[UnitPriceDiscount]
-      ,[LineTotal]
-      ,[rowguid]
-      ,[ModifiedDate]
-
-Table  [SalesLT].[Product] with following columns
-[ProductID]
-      ,[Name]
-      ,[ProductNumber]
-      ,[Color]
-      ,[StandardCost]
-      ,[ListPrice]
-      ,[Size]
-      ,[Weight]
-      ,[ProductCategoryID]
-      ,[ProductModelID]
-      ,[SellStartDate]
-      ,[SellEndDate]
-      ,[DiscontinuedDate]
-      ,[ThumbNailPhoto]
-      ,[ThumbnailPhotoFileName]
-      ,[rowguid]
-      ,[ModifiedDate]
-
-Table [SalesLT].[ProductCategory] with following columns
-[ProductCategoryID]
-      ,[ParentProductCategoryID]
-      ,[Name]
-      ,[rowguid]
-      ,[ModifiedDate]
-
+Given tables [test_table] with following columns
+ [Name]
+      ,[Scope]
+      ,[Emission Source]
+      ,[Activity type]
+      
  Write a SQL server query for following question:
  {nlquery}
     """
@@ -137,10 +83,6 @@ def get_query(nlquery):
     generate a query in kusto format for following question {nlquery}. 
     The table's name is anomaly_output with columns: location, car_type, count and timestamp
     """
-
-
-
-
 def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
