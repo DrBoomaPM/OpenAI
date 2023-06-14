@@ -3,7 +3,7 @@ info:
   version: 1.0.0
   title: my-nlquery-connector-title
   description: nlq-description
-host: genai-func-app1122.azurewebsites.net
+host: az-func-app1122.azurewebsites.net
 basePath: /
 schemes:
   - https
@@ -18,7 +18,7 @@ paths:
       operationId: Get-Prompt
       parameters:
         - name: prompt
-          default: top 5 products
+          default: top 5 activity
           in: query
           type: string
           required: true
