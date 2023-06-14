@@ -69,7 +69,7 @@ def execute_sql_query(query):
 
 def get_sales_sql_query(nlquery):
     return f"""
-Given tables [test_table] with following columns
+Given tables [Sheet1$] with following columns
  [Name]
       ,[Scope]
       ,[Emission Source]
