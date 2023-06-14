@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
   version: 1.0.0
-  title: my-nlquery-connector-title
-  description: nlq-description
+  title: my-nlpquery-connector-title
+  description: nlpquery-description
 host: az-func-app1122.azurewebsites.net
 basePath: /
 schemes:
@@ -11,7 +11,7 @@ consumes: []
 produces:
   - application/json
 paths:
-  /api/NLQuery:
+  /api/NLPQuery:
     get:
       summary: Get-Prompt
       description: my description for get-prompt
