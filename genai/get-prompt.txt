@@ -18,7 +18,7 @@ paths:
       operationId: Get-Prompt
       parameters:
         - name: prompt
-          default: top 5 activity
+          default: top 5 Purchased electricity
           in: query
           type: string
           required: true
